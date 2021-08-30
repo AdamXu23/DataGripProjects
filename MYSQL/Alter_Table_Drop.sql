@@ -1,0 +1,1 @@
+alter table shop.shohin drop  column Shohin_info;
