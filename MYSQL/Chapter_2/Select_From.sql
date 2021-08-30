@@ -1,0 +1,1 @@
+select shohin_id, shohin_name, buying_price from shop.shohin;
