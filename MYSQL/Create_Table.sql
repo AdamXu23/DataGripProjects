@@ -1,4 +1,4 @@
-create table Shohin
+create table shop.Shohin
 (
     Shohin_id       char(4)         not null ,
     Shohin_name     varchar(100)    not null ,
@@ -7,4 +7,4 @@ create table Shohin
     Buying_price    integer ,
     reg_Date        date    ,
     primary key (Shohin_id)
-)
+);
