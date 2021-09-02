@@ -5,5 +5,5 @@ from shop.shohin;
 select sum(Sell_Price),sum(Buying_price)
 from shop.shohin;
 -- AGV --
-select avg(Sell_Price)
+select avg(Sell_Price),avg(Buying_price)
 from shop.shohin;
