@@ -2,5 +2,5 @@
 select COUNT(*),COUNT(Buying_price)
 from shop.shohin;
 -- SUM --
-select sum(Sell_Price)
+select sum(Sell_Price),sum(Buying_price)
 from shop.shohin;
