@@ -15,3 +15,7 @@ group by Buying_price;
 select Shohin_name,Buying_price,count(*)
 from shop.shohin
 group by Buying_price;
+
+select Shohin_catalg as sc ,count(*)
+from shop.shohin
+group by sc;
