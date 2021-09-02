@@ -16,3 +16,6 @@ from shop.shohin;
 -- 先計算在排除重複值 --
 select distinct count(Shohin_catalg)
 from shop.shohin;
+-- distinct --
+select sum(Sell_Price),sum(distinct Sell_Price)
+from shop.shohin;
