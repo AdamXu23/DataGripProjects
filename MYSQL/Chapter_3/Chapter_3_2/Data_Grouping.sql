@@ -6,3 +6,12 @@ group by Shohin_catalg;
 select Buying_price,count(*)
 from shop.shohin
 group by Buying_price;
+
+select Buying_price,count(*)
+from shop.shohin
+where  Shohin_catalg = '衣物'
+group by Buying_price;
+
+select Shohin_name,Buying_price,count(*)
+from shop.shohin
+group by Buying_price;
