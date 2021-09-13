@@ -1,0 +1,1 @@
+select * from Login_Table where User_Name = 'root';
