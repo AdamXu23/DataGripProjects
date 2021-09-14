@@ -1,0 +1,1 @@
+ALTER TABLE Port_Table ADD PRIMARY KEY (Id);
