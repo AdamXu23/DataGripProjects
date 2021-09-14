@@ -1,2 +1,1 @@
-insert into Login_Table values ('root','AVEX1234',0);
-insert into Login_Table values ('admin','AVEX1234',0);
+insert into Port_Table values (1,'SOHC000','001','192.168.127.001',950,1,1,255,255,255,0,1);
