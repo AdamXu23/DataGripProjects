@@ -19,3 +19,12 @@ group by Buying_price;
 select Shohin_catalg as sc ,count(*)
 from shop.shohin
 group by sc;
+
+select Shohin_catalg,count(*)
+from shop.shohin
+group by Shohin_catalg;
+
+select Shohin_catalg,count(*)
+from  shop.shohin
+where  count(*) = 2
+group by Shohin_catalg;

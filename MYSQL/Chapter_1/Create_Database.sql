@@ -1,1 +1,1 @@
-create database  shop
+create database shop
