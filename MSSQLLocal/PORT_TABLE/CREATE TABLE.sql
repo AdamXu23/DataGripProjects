@@ -18,9 +18,9 @@ create table Port_Table
     color_B     int         not null,
     Port_Enable bit,
     CONSTRAINT pk_Port_Table_Id PRIMARY KEY (Id),
-    constraint U_Port_Table_ID unique (Id),
-    constraint U_Port_Table_EQ_NAME unique (EQ, Name),
-    constraint U_Port_Table_IP unique (IP)
+    CONSTRAINT U_Port_Table_ID unique (Id),
+    CONSTRAINT U_Port_Table_EQ_NAME unique (EQ, Name),
+    CONSTRAINT U_Port_Table_IP unique (IP)
 );
 
 select * from sys.tables;
