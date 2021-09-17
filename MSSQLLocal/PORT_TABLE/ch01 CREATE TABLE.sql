@@ -24,3 +24,6 @@ create table Port_Table
 );
 
 select * from sys.tables;
+
+IF not EXISTS (select * from Port_Table )
+insert into Port_Table values (0,'EQ','000','192.168.127.250',950,1,1,255,255,255,0,1);

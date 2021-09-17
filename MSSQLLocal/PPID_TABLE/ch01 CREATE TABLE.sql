@@ -10,8 +10,11 @@ create table PPID_Table
     Time_2  int not null,
     Flow_1  int not null,
     Flow_2  int not null,
-    CONSTRAINT pk_PPID_Table_Id PRIMARY KEY (Id),
+    CONSTRAINT pk_PPID_Table_Id PRIMARY +KEY (Id),
     CONSTRAINT U_PPID_Table_ID unique (Id)
 );
 
+
+IF not EXISTS (select * from PPID_Table )
+    insert into PPID_Table values ('PPID20',600,600,350,80);
 select * from sys.tables;
