@@ -9,7 +9,7 @@ IF NOT EXISTS (select * from sys.tables where name = 'SECS_ErrorCode')
 CREATE TABLE SECS_ErrorCode (
     ErrorCode  int  NOT NULL ,
     Annotation   VARCHAR (50) NOT NULL,
-    PRIMARY KEY (Annotation),
+    PRIMARY KEY (Annotation)
 );
 -- 加入 SECS_ErrorCode 比對資料 --
 INSERT INTO SECS_ErrorCode (ErrorCode, Annotation) VALUES (1031, 'ARRAYACCESS');
