@@ -1,16 +1,17 @@
+-- 創建 SECS_LOG TABLE --
 IF NOT EXISTS (select * from sys.tables where name = 'SECS_LOG')
 CREATE TABLE SECS_LOG (
     Date_time  datetime2  NOT NULL,
     ErrorCode   int NOT NULL
 );
-
+-- 創建 SECS_ErrorCode TABLE --
 IF NOT EXISTS (select * from sys.tables where name = 'SECS_ErrorCode')
 CREATE TABLE SECS_ErrorCode (
     ErrorCode  int  NOT NULL ,
     Annotation   VARCHAR (50) NOT NULL,
     PRIMARY KEY (Annotation),
 );
-
+-- 加入 SECS_ErrorCode 比對資料 --
 INSERT INTO SECS_ErrorCode (ErrorCode, Annotation) VALUES (1031, 'ARRAYACCESS');
 INSERT INTO SECS_ErrorCode (ErrorCode, Annotation) VALUES (1014, 'BADFUNCTION');
 INSERT INTO SECS_ErrorCode (ErrorCode, Annotation) VALUES (1005, 'BADITEMID');
@@ -141,17 +142,20 @@ INSERT INTO SECS_ErrorCode (ErrorCode, Annotation) VALUES (1056, 'wsErrU8Range')
 INSERT INTO SECS_ErrorCode (ErrorCode, Annotation) VALUES (1073, 'wsErrUnknownSecondary');
 INSERT INTO SECS_ErrorCode (ErrorCode, Annotation) VALUES (1035, 'wsErrZeroNLB');
 
+
+-- 創建 SECS_LOG_Buffer TABLE 作爲接收區--
 IF NOT EXISTS (select * from sys.tables where name = 'SECS_LOG_Buffer')
 CREATE TABLE SECS_LOG_Buffer (
     Annotation   VARCHAR (50) NOT NULL
 );
-
+-- 創建 SECS_LOG_Buffer 觸發器 trg_SECS_LOG_INSERT --
 CREATE TRIGGER trg_SECS_LOG_INSERT
 ON SECS_LOG_Buffer
 AFTER INSERT
 AS
 BEGIN
     SET NOCOUNT ON;
+    -- 填寫資料到SECS_LOG --
     INSERT INTO SECS_LOG(
         Date_time,
         ErrorCode
@@ -161,6 +165,7 @@ BEGIN
            ErrorCode
     FROM SECS_ErrorCode
     WHERE EXISTS (select * from inserted ta where SECS_ErrorCode.Annotation = ta.Annotation);
+    -- 刪除 SECS_LOG_Buffer 資料--
     TRUNCATE TABLE SECS_LOG_Buffer;
 END;
 
