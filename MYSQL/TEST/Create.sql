@@ -114,3 +114,34 @@ select e.name employee,
 from departments d, employees e
 where d.deptno = e.deptno
 order by e.name;
+
+
+select e.name employee,
+          (select name
+           from departments d
+           where d.deptno = e.deptno) department,
+           e.job
+from employees e
+order by e.name;
+
+alter table EMPLOYEES
+add country_code varchar(2);
+
+update employees
+set country_code = 'US';
+
+update employees
+set commission = 2000
+where  name = 'Sam Smith';
+
+select name, country_code, salary, commission
+from employees
+order by name;
+
+select
+      count(*) employee_count,
+      sum(salary) total_salary,
+      sum(commission) total_commission,
+      min(salary + nvl(commission,0)) min_compensation,
+      max(salary + nvl(commission,0)) max_compensation
+from employees;
