@@ -145,3 +145,34 @@ select
       min(salary + nvl(commission,0)) min_compensation,
       max(salary + nvl(commission,0)) max_compensation
 from employees;
+
+
+select * from DEPARTMENTS into outfile '/tmp/test.csv' fields terminated by ','  escaped by '' optionally enclosed  by ''   lines terminated by '\n' ;
+
+
+
+create table TEST123 (
+  date_time          datetime,
+  salary            int,
+  commission        int
+);
+insert into TEST123  values
+   ('2021-09-28 00:00:01','123','1567');
+
+
+SELECT * INTO OUTFILE 'D:\\2021-10.csv'
+  FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+  LINES TERMINATED BY '\n'
+  FROM TEST123
+  where date_time BETWEEN '2021-10-01 00:00:00' AND
+                          '2021-10-30 23:59:59';
+
+SELECT * INTO OUTFILE 'D:\\2021-10(01).csv'
+  FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY ''
+  LINES TERMINATED BY '\n'
+    from (
+        select 'date_time','salary','commission' union
+        select * from TEST123
+        where date_time BETWEEN '2021-10-01 00:00:00' AND
+                          '2021-10-30 23:59:59'
+        ) b;
