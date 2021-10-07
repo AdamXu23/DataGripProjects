@@ -160,19 +160,41 @@ insert into TEST123  values
    ('2021-09-28 00:00:01','123','1567');
 
 
-SELECT * INTO OUTFILE 'D:\\2021-10.csv'
-  FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
-  LINES TERMINATED BY '\n'
-  FROM TEST123
+SELECT date_time,Foup_ID
+  FROM test_123
   where date_time BETWEEN '2021-10-01 00:00:00' AND
                           '2021-10-30 23:59:59';
 
-SELECT * INTO OUTFILE 'D:\\2021-10(01).csv'
-  FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY ''
-  LINES TERMINATED BY '\n'
+SHOW PROCESSLIST;
+show variables like '%sche%';
+
+CREATE PROCEDURE timing_fush_hosts()
+BEGIN
+set @sql =  concat('SELECT * INTO OUTFILE \'D:/',DATE_FORMAT(now(), '%Y_%m_%d %H%i%S'),'.csv\'
+  FIELDS TERMINATED BY \',\' OPTIONALLY ENCLOSED BY \'\'
+  LINES TERMINATED BY \'\\n\'
     from (
-        select 'date_time','salary','commission' union
-        select * from TEST123
-        where date_time BETWEEN '2021-10-01 00:00:00' AND
-                          '2021-10-30 23:59:59'
-        ) b;
+        select \'date_time\',\'salary\',\'commission\',\'GUID\' union
+        select * from test_123
+        where date_time BETWEEN \'2021-10-01 00:00:00\'AND
+                            \'2021-10-30 23:59:59\'
+        )b;');
+prepare s1 from @sql; -- create statment from variable
+execute s1; -- execute prepared statements
+END;
+select * from EVENTS;
+
+SELECT * FROM information_schema.events;
+
+create event e_flush_hosts
+    on schedule
+        every 1 minute
+    on completion preserve
+    enable
+    do
+    call timing_flush_hosts();
+
+show variables like 'event_scheduler';
+
+
+DROP EVENT event_flush_hosts;
