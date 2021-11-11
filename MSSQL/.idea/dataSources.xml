@@ -15,5 +15,12 @@
         <property name="DOMAIN" value="DESKTOP-C3LCAV0\Administrator" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="Microsoft SQL Server - @MSSQL" uuid="d974ae85-f07c-4597-a79d-9c887c4f41b8">
+      <driver-ref>sqlserver.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://MSSQL:1433</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
