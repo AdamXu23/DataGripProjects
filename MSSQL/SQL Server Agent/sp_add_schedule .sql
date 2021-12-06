@@ -1,4 +1,4 @@
-exec
+exec sp_add_schedule
     @schedule_name = N'NightlyJobs' ,
     @freq_type = 4,
     @freq_interval = 1,

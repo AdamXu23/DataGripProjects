@@ -8,4 +8,3 @@ insert into Daytime (dt)
 values (getdate());
 end ;
 
-exec INSERT_Daytime;
