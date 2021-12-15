@@ -15,5 +15,12 @@
       <jdbc-url>jdbc:sqlserver://DESKTOP-EEMSVSP\MSSQLSERVER_2019:1433</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="ADAM-XU\MSSQLSERVER_2019" uuid="0824be95-2be1-4b7d-84c6-6b283b0e9112">
+      <driver-ref>sqlserver.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://ADAM-XU\MSSQLSERVER_2019:1433</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
