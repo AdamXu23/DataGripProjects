@@ -1,6 +1,13 @@
 insert into Foup_Log_Data values
-('3F56C749-41DD-411B-86F3-6FC710583961',
+('0EE3D13B-6107-44AC-BC2E-4269CA60786C',
  20.9,
  58.1,
  35.2,
- convert(datetime, '2021-11-30 10:34:09', 120));
+ GETDATE());
+
+insert into Foup_Log_Data values
+('0EE3D13B-6107-44AC-BC2E-4269CA60786C',
+ ROUND(20.95645,1),
+ ROUND(58.1265,1),
+ ROUND(35.2781,1),
+ GETDATE());
