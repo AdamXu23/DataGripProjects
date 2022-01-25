@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="192.168.127.252 (MSSQLSERVER_2019)" uuid="932367e8-4c90-40d0-9bf6-4be7ca1fecdb">
+    <data-source source="LOCAL" name="MSSQL (MSSQLSERVER_2019)" uuid="932367e8-4c90-40d0-9bf6-4be7ca1fecdb">
       <driver-ref>sqlserver.ms</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://192.168.127.252\MSSQLSERVER_2019:1433</jdbc-url>
+      <jdbc-url>jdbc:sqlserver://MSSQL\MSSQLSERVER_2019:1433</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="@DESKTOP-EEMSVSP (MSSQLSERVER_2019)" uuid="ca080d99-6fc9-4115-9dfe-866e133e6636">
+    <data-source source="LOCAL" name="@DESKTOP-9E1AN5U (MSSQLSERVER_2019)" uuid="ca080d99-6fc9-4115-9dfe-866e133e6636">
       <driver-ref>sqlserver.ms</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://DESKTOP-EEMSVSP\MSSQLSERVER_2019:1433</jdbc-url>
+      <jdbc-url>jdbc:sqlserver://DESKTOP-9E1AN5U\MSSQLSERVER_2019:1433</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="ADAM-XU\MSSQLSERVER_2019" uuid="0824be95-2be1-4b7d-84c6-6b283b0e9112">
