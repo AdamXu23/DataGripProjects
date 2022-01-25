@@ -17,4 +17,6 @@ select Job_GUID,Device_Table.Device_Name,
        Location_Table.Location_Name
 from Job_Table
 inner join Device_Table on Job_Table.Device_GUID = Device_Table.Device_GUID
-inner join Location_Table on Job_Table.Location_GUID = Location_Table.Location_GUID;
+inner join Location_Table on Job_Table.Location_GUID = Location_Table.Location_GUID
+
+;
