@@ -38,3 +38,18 @@ create table Dispatch_List
     CONSTRAINT PK_Dispatch_GUID PRIMARY KEY (Dispatch_GUID)
 );
 end;
+
+IF NOT EXISTS (select * from sys.tables where name = 'Foup_Current')
+BEGIN
+create table Foup_Current
+(
+    Foup_Current_GUID       uniqueidentifier    not null,
+    Foup_GUID     uniqueidentifier   not null,
+    Foup_Current_DateTime   datetime2           not null,
+    Port_GUID   uniqueidentifier   not null,
+
+    CONSTRAINT FK_Foup_Current_GUID FOREIGN KEY (Foup_GUID) REFERENCES dbo.Foup_Table(Foup_GUID) ON DELETE CASCADE,
+    CONSTRAINT FK_Port_Current_GUID FOREIGN KEY (Port_GUID) REFERENCES dbo.Port_Table(Port_GUID) ON DELETE CASCADE,
+    CONSTRAINT PK_Foup_Current_GUID PRIMARY KEY (Foup_Current_GUID)
+);
+end;
