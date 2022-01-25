@@ -1,4 +1,2 @@
-select * from Foup_Current_View ;
-select * from Foup_Dispatch_List_View;
-select * from Car_Current_View ;
-select * from Car_Dispatch_List_View;
+select * from Device_location_View ;
+select * from Job_Table_View;

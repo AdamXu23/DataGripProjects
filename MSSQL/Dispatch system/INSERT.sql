@@ -1,26 +1,22 @@
-insert into Port_Table values (newid(),'STK01','STK00001'),
-                              (newid(),'STK02','STK00002'),
-                              (newid(),'STK03','STK00003'),
-                              (newid(),'STK04','STK00004'),
-                              (newid(),'AGV01','AGV00001'),
-                              (newid(),'AGV02','AGV00002'),
-                              (newid(),'CAR01','CAR00001'),
-                              (newid(),'CAR02','CAR00002')
-                              ;
+insert into Device_Table values (newid(),'Foup_A','SPN00012'),
+                                (newid(),'Foup_B','SPN00029'),
+                                (newid(),'Car_A',null);
 
-insert into Foup_Table values (newid(),'A','SPN00012'),
-                              (newid(),'B','SPN00029')
-                              ;
+insert into Location_Table values (newid(),null),
+                              (newid(),'STK_01'),
+                              (newid(),'STK_02'),
+                              (newid(),'STK_03'),
+                              (newid(),'STK_04'),
+                              (newid(),'AGV_01'),
+                              (newid(),'AGV_02'),
+                              (newid(),'Car_01'),
+                              (newid(),'Car_02'),
+                              (newid(),'Geek_01'),
+                              (newid(),'Geek_02');
 
-insert into Foup_Current values (newid(),'5FE62823-F52A-4221-9CA2-C45F15CC9925',GETDATE(),'371775F4-EB5B-4D86-A3F5-8BC4E3EB5BA7'),
-                                (newid(),'0278C547-E44A-4901-A663-CBE3012FAFEB',GETDATE(),'DF08F023-B9EA-4D38-BD1F-5F4B0FCF18B7')
-                              ;
-
-insert into Car_Table values (newid(),'CART1','CART0001')
-                              ;
-
-insert into Car_Parking_Space values (newid(),'CARP1','CARP0001'),
-                                (newid(),'CARP2','CARP0002')
-                              ;
-
-insert into Car_Current values (newid(),'18B1C732-7292-4EC1-BFF7-5AC53F2F9E86',GETDATE(),'9FF12E87-B21A-4236-BC03-A33AC6FC855A');
+insert into Device_location values ('FBA4B408-1630-4C40-9220-6C9A96F496F9','64AC8405-34C7-491F-9CC0-4A5D878B0CD7'),
+                              ('C4CB572C-AEB9-4CC5-B143-EC215E7437D2','89D42D14-9E71-4E7C-ACAC-BFBFC435724E'),
+                              ('B8D3DD40-9761-42F0-8065-D1A38D15044C','2D2F84CE-9243-4B9A-8E4C-22D1774ADCDE');
+insert into Job_Table values (newid(),'FBA4B408-1630-4C40-9220-6C9A96F496F9',getdate(),'64AC8405-34C7-491F-9CC0-4A5D878B0CD7'),
+                              (newid(),'C4CB572C-AEB9-4CC5-B143-EC215E7437D2',getdate(),'89D42D14-9E71-4E7C-ACAC-BFBFC435724E'),
+                              (newid(),'B8D3DD40-9761-42F0-8065-D1A38D15044C',getdate(),'2D2F84CE-9243-4B9A-8E4C-22D1774ADCDE');
