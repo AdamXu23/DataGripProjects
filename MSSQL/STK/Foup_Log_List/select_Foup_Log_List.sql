@@ -1,1 +1,0 @@
-select * from Foup_Log_List ;
