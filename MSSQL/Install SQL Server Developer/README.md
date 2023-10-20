@@ -1,5 +1,5 @@
-# Database
+# Install SQL Server Developer
 
-## *目錄*
+## *目錄*# Install Python runtime
 1.   SQL Install [**Install SQL Server Developer**](https://github.com/AdamXu23/Python/tree/main/Day01_Install_and_Create_Project)。
 2.   SSMS Pandas [**Install SQL Server Management Studio**](https://github.com/AdamXu23/Python_Pandas/tree/main/Day02_Install_Pandas)。
