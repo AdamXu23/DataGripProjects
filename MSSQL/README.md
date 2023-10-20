@@ -1,4 +1,5 @@
 # Database
-### 1. [Microsoft SQL Server 2019](https://github.com/AdamXu23/Database/tree/main/MSSQL)
-### 2. [My SQL](https://github.com/AdamXu23/Database/tree/main/MYSQL)
-### 3. [Oracle Database](https://github.com/AdamXu23/Database/tree/main/Oracle_Database)
+
+## *目錄*
+1.   SQL Install [**Install SQL Server Developer **](https://github.com/AdamXu23/Python/tree/main/Day01_Install_and_Create_Project)。
+2.   SSMS Pandas [**Install SQL Server Management Studio**](https://github.com/AdamXu23/Python_Pandas/tree/main/Day02_Install_Pandas)。
